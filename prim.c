@@ -3,12 +3,12 @@
 //定数
 #define MAX_VALUE 1000000
 #define INF MAX_VALUE-1
-#define MAX_SIZE 7
+#define MAX_SIZE 7//頂点数
 
 int main()
 {
-	int closest[MAX_SIZE] = {0,0,0,0,0,0,0};
-	int low_cost[MAX_SIZE] = {0,0,0,0,0,0,0};
+	int closest[MAX_SIZE] = {0,0,0,0,0,0,0};//最も近い頂点
+	int low_cost[MAX_SIZE] = {0,0,0,0,0,0,0};//各頂点への最小コスト
 	int total_cost = 0;
 	//隣接行列
 	int weight[MAX_SIZE][MAX_SIZE] = {
@@ -26,8 +26,8 @@ int main()
 		low_cost[i] = weight[0][i];
 	}
 	//頂点の選択
-	int min;
-	int j,k;
+	int min;//最小コスト
+	int j,k;//最小コストとなる頂点
 	for(i=1;i<MAX_SIZE;i++){
 		min = low_cost[1];
 		k = 1;
@@ -39,6 +39,10 @@ int main()
 		}
 		total_cost += low_cost[k];
 		printf("%d-%d  %d\n",k,closest[k],low_cost[k]);
+		for(j=0;j<MAX_SIZE;j++){
+			printf("%d ",low_cost[j]);
+		}
+		printf("\n");
 		low_cost[k] = MAX_VALUE;
 		for(j=1;j<MAX_SIZE;j++){
 			if(low_cost[j] < MAX_VALUE && low_cost[j] > weight[k][j]){
