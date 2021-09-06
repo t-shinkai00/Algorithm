@@ -5,7 +5,8 @@ while True:
         line=list(input().replace(" ","").replace(".",""))
         for i in range(len(line)):
             # print(line[i])
-            count[ord(line[i].lower())-ord("a")]+=1
+            if 0<=ord(line[i].lower())-ord("a")<=ord("z")-ord("a"):
+                count[ord(line[i].lower())-ord("a")]+=1
     except EOFError:
         break
 for i in range(ord("z")-ord("a")+1):
