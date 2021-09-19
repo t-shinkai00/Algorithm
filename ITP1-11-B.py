@@ -1,3 +1,4 @@
+# https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/11/ITP1_11_B
 class Dice:
     def __init__(self):
         self.value=list(map(int,input().split()))
