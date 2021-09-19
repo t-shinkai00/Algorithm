@@ -1,27 +1,36 @@
 class Dice:
     def __init__(self):
         self.value=list(map(int,input().split()))
-        self.command=input()
+        self.num=int(input())
 
-    def roll(self):
-        for i in range(len(self.command)):
-            if self.command[i]=="N":
-                self.value[0],self.value[1],self.value[4],self.value[5]=self.value[1],self.value[5],self.value[0],self.value[4]
-            elif self.command[i]=="S":
-                self.value[0],self.value[1],self.value[4],self.value[5]=self.value[4],self.value[0],self.value[5],self.value[1]
-            elif self.command[i]=="E":
-                self.value[0],self.value[2],self.value[3],self.value[5]=self.value[3],self.value[0],self.value[5],self.value[2]
-            elif self.command[i]=="W":
-                self.value[0],self.value[2],self.value[3],self.value[5]=self.value[2],self.value[5],self.value[0],self.value[3]
+    def roll(self,direction):
+        if direction=="N":
+            self.value[0],self.value[1],self.value[4],self.value[5]=self.value[1],self.value[5],self.value[0],self.value[4]
+        elif direction=="S":
+            self.value[0],self.value[1],self.value[4],self.value[5]=self.value[4],self.value[0],self.value[5],self.value[1]
+        elif direction=="E":
+            self.value[0],self.value[2],self.value[3],self.value[5]=self.value[3],self.value[0],self.value[5],self.value[2]
+        elif direction=="W":
+            self.value[0],self.value[2],self.value[3],self.value[5]=self.value[2],self.value[5],self.value[0],self.value[3]
+
+    def command(self):
+        for i in range(self.num):
+            top,front=map(int,input().split())
+            if front==self.value[2] or front==self.value[3]:
+                self.roll("W")
+            while front!=self.value[1]:
+                self.roll("N")
+            while top!=self.value[0]:
+                self.roll("W")
+            self.print_face()
 
     def print_dice(self):
         print(self.value)
         print(self.command)
-        print(self.x,self.y)
 
     def print_face(self):
-        print(self.value[0])
+        print(self.value[2])
 
 dice1=Dice()
-dice1.roll()
-dice1.print_face()
+dice1.command()
+# dice1.print_face()
