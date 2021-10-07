@@ -16,7 +16,10 @@ void selection_sort(int n, int a[]){
 }
 
 int main(void){
-  int arr[5]={3,5,2,1,4};
+  int arr[5]={3,5,2,1,4},t;
   selection_sort(5,arr);
+  for(t = 0; t < 5; t++)
+    printf("%d ", arr[t]);
+  printf("\n");
   return 0;
 }
