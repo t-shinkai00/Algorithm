@@ -17,4 +17,5 @@ def BinarySearch(list,b):
         return BinarySearch(list[:half],b)
     else:
         return BinarySearch(list[half:],b)
+
 print(BinarySearch(A,input))
