@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include<stdio.h>
 
 //定数
 #define MAX_VALUE 1000000
