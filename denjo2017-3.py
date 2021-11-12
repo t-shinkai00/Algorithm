@@ -2,7 +2,7 @@ A=[11,10,11,11,7,11,11,3,8]
 i=0
 def read_log():
   global A,i
-  if i>=len(A):
+  if i==len(A):
     return -1
   else:
     result=A[i]
