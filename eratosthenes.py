@@ -26,7 +26,16 @@ def eratosthenes(limit):
 
 
 def main(argv):
+  if not argv[0].isdigit():  # 入力が数値か判定
+    print(f"[Error]Invalid argument: {argv[0]}")
+    return
+
   n = int(argv[0])
+
+  if n < 2:
+    print("[Error]Input number must be greater than or equal to 2.")
+    return
+
   primes = eratosthenes(n)
   print(primes)  # n以下の素数を表示
 
