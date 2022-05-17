@@ -4,7 +4,7 @@ import math
 
 
 def eratosthenes(limit):
-  nums = [i for i in range(2, limit)]  # 素数の候補
+  nums = [i for i in range(2, limit+1)]  # 素数の候補
   primes = []  # 素数のリスト
 
   while True:
