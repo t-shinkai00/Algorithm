@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc257/tasks/abc257_b
 n, k, q = map(int, input().split())
 A = list(map(int, input().split()))
 L = list(map(int, input().split()))
