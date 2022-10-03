@@ -1,3 +1,5 @@
+# https://atcoder.jp/contests/abc271/tasks/abc271_c
+
 N = int(input())
 A = set(map(int, input().split()))
 # print(A)

@@ -1,3 +1,5 @@
+# https://atcoder.jp/contests/abc271/tasks/abc271_b
+
 n, q = map(int, input().split())
 a = []
 for _ in range(n):
