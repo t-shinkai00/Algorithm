@@ -1,5 +1,5 @@
 # https://atcoder.jp/contests/abc275/tasks/abc275_c
-def index_Multi(List,liter):
+def index_multi(List,liter):
   #Listはリスト本体・literは検索したい文字
   index_L = []
   for val in range(0,len(List)):
@@ -22,7 +22,7 @@ def is_square(i, j):
 S = []
 for i in range(9):
   line = list(input())
-  pones = index_Multi(line, "#")
+  pones = index_multi(line, "#")
   for el in pones:
     S.append((i, el))
 # print(S)
