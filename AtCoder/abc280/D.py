@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc280/tasks/abc280_d
 from collections import defaultdict
 
 def prime_factorize(N):
