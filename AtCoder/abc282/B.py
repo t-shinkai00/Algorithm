@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc282/tasks/abc282_b
 n, m = map(int, input().split())
 
 def is_all_correct(a, b, m):
