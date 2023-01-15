@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc285/tasks/abc285_d
 N = int(input())
 
 user_list = []

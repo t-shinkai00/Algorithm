@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc285/tasks/abc285_c
 def calc_num(alpabet):
   return ord(alpabet)-64
 
