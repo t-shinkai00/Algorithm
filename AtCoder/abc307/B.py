@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc307/tasks/abc307_b
 def is_kaibun(s):
     if str(s) == str(s)[::-1]:
         return True
